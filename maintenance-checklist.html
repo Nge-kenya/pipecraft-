@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plumbing Maintenance Checklist | Pipecraft Plumbing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap');
+        
+        .check-item {
+            transition: all 0.2s ease;
+        }
+        
+        .check-item:hover {
+            background-color: #f8fafc;
+        }
+        
+        .completed {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <div class="max-w-4xl mx-auto bg-white shadow-xl min-h-screen">
+        <!-- Header -->
+        <div class="bg-blue-900 text-white py-12 px-10">
+            <div class="flex items-center gap-4 mb-6">
+                <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-5xl">🚰</div>
+                <div>
+                    <div class="text-4xl font-bold tracking-tight">PipeCraft Plumbing Solutions</div>
+                    <div class="text-blue-300">Your property • Our priority • Proven expertise</div>
+                </div>
+            </div>
+            <h1 class="text-5xl font-bold leading-none">Plumbing Maintenance Checklist</h1>
+            <p class="mt-4 text-xl text-blue-200">Keep your plumbing system healthy and prevent costly repairs</p>
+            <div class="mt-6 flex items-center gap-8 text-sm">
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>Monthly • Quarterly • Annually</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-phone"></i>
+                    <span>0712 620 585</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="p-10">
+            <div class="bg-amber-50 border border-amber-200 rounded-3xl p-6 mb-12 text-sm">
+                <div class="flex gap-3">
+                    <i class="fas fa-lightbulb text-amber-500 mt-0.5"></i>
+                    <div>
+                        <strong>Pro Tip:</strong> Following this checklist can help you avoid 70% of common plumbing emergencies. 
+                        For professional inspection and maintenance, contact Pipecraft Plumbing Solutions.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Checklist -->
+            <div class="space-y-16">
+                <!-- Kitchen -->
+                <div>
+                    <div class="flex items-center gap-4 mb-6 border-b pb-4">
+                        <div class="text-4xl">🍳</div>
+                        <div>
+                            <h2 class="text-3xl font-semibold">Kitchen Area</h2>
+                            <p class="text-gray-600">High-traffic area — check frequently</p>
+                        </div>
+                    </div>
+                    <div class="grid gap-3" id="kitchen-list">
+                        <!-- Items added via JS -->
+                    </div>
+                </div>
+
+                <!-- Bathroom -->
+                <div>
+                    <div class="flex items-center gap-4 mb-6 border-b pb-4">
+                        <div class="text-4xl">🚽</div>
+                        <div>
+                            <h2 class="text-3xl font-semibold">Bathroom & Toilets</h2>
+                            <p class="text-gray-600">Prevent leaks and clogs</p>
+                        </div>
+                    </div>
+                    <div class="grid gap-3" id="bathroom-list"></div>
+                </div>
+
+                <!-- Water Systems -->
+                <div>
+                    <div class="flex items-center gap-4 mb-6 border-b pb-4">
+                        <div class="text-4xl">💧</div>
+                        <div>
+                            <h2 class="text-3xl font-semibold">Water Heater & Supply</h2>
+                        </div>
+                    </div>
+                    <div class="grid gap-3" id="water-list"></div>
+                </div>
+
+                <!-- Drains & Pipes -->
+                <div>
+                    <div class="flex items-center gap-4 mb-6 border-b pb-4">
+                        <div class="text-4xl">🪠</div>
+                        <div>
+                            <h2 class="text-3xl font-semibold">Drains, Pipes & Sewer</h2>
+                        </div>
+                    </div>
+                    <div class="grid gap-3" id="drain-list"></div>
+                </div>
+
+                <!-- Exterior -->
+                <div>
+                    <div class="flex items-center gap-4 mb-6 border-b pb-4">
+                        <div class="text-4xl">🌳</div>
+                        <div>
+                            <h2 class="text-3xl font-semibold">Exterior & Outdoor</h2>
+                        </div>
+                    </div>
+                    <div class="grid gap-3" id="exterior-list"></div>
+                </div>
+            </div>
+
+            <!-- Professional Maintenance -->
+            <div class="mt-20 bg-gradient-to-br from-blue-50 to-slate-50 border border-blue-100 rounded-3xl p-10">
+                <h3 class="text-2xl font-semibold mb-6 flex items-center gap-3">
+                    <span class="text-blue-600">📅</span>
+                    Recommended Professional Services
+                </h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-white p-6 rounded-2xl">
+                        <div class="font-semibold text-lg mb-2">Annual Full Inspection</div>
+                        <ul class="text-sm space-y-2 text-gray-600">
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-green-500 mt-1"></i> Pressure test</li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-green-500 mt-1"></i> Leak detection</li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-green-500 mt-1"></i> Water quality check</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl">
+                        <div class="font-semibold text-lg mb-2">Bi-Annual Drain Cleaning</div>
+                        <ul class="text-sm space-y-2 text-gray-600">
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-green-500 mt-1"></i> Hydro-jetting</li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-green-500 mt-1"></i> Sewer line inspection</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mt-8 text-center">
+                    <a href="booking.html" class="inline-flex items-center gap-3 bg-blue-600 text-white px-8 py-4 rounded-2xl font-semibold hover:bg-blue-700 transition-all">Book Professional Maintenance<i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="bg-gray-900 text-gray-400 text-center py-12 px-10 text-sm">
+            <p class="text-white px-12">© PipeCraft Plumbing Solutions</p>
+            <p class=""> • Your property • Our priority • Proven expertise.</p>
+            <p class="mt-2">For professional plumbing services and materials delivery, call <span class="text-white">0712 620 585</span></p>
+            <p class="mt-6 text-xs">This checklist is provided as a free resource. Regular professional maintenance is strongly recommended.</p>
+        </div>
+    </div>
+
+    <script>
+        const checklists = {
+            kitchen: [
+                "Check under sink for leaks or moisture",
+                "Clean faucet aerator and remove debris",
+                "Inspect garbage disposal for proper operation",
+                "Run hot water to check for unusual noises",
+                "Ensure dishwasher drain hose is secure",
+                "Clean sink strainer regularly"
+            ],
+            bathroom: [
+                "Test toilet flush and check for leaks around base",
+                "Inspect showerheads and faucets for drips",
+                "Check caulking around tub, shower and sink",
+                "Clean shower drain to prevent clogs",
+                "Test water pressure in shower",
+                "Check for mold or water damage on walls/floors"
+            ],
+            water: [
+                "Flush water heater sediment (every 6 months)",
+                "Check water heater pressure relief valve",
+                "Inspect visible pipes for corrosion or leaks",
+                "Test water pressure throughout house",
+                "Check water softener salt level (if applicable)",
+                "Insulate exposed pipes"
+            ],
+            drain: [
+                "Pour hot water + baking soda/vinegar down drains monthly",
+                "Check for slow draining sinks or showers",
+                "Inspect cleanouts for accessibility",
+                "Monitor for unusual sewer odors",
+                "Check main sewer line cleanout",
+                "Avoid flushing wipes, grease, or paper towels"
+            ],
+            exterior: [
+                "Inspect outdoor hose bibs and shut off for winter",
+                "Check sump pump operation (if present)",
+                "Ensure downspouts direct water away from foundation",
+                "Inspect septic tank (if applicable)",
+                "Check irrigation system for leaks",
+                "Clear debris from roof gutters"
+            ]
+        };
+
+        function renderChecklist(containerId, items) {
+            const container = document.getElementById(containerId);
+            container.innerHTML = items.map((item, index) => `
+                <div onclick="this.classList.toggle('completed')" 
+                     class="check-item flex items-start gap-4 bg-white border border-gray-100 hover:border-blue-200 rounded-2xl p-5 cursor-pointer group">
+                    <input type="checkbox" class="mt-1 w-5 h-5 accent-blue-600 cursor-pointer">
+                    <span class="flex-1 text-[17px] leading-relaxed">${item}</span>
+                </div>
+            `).join('');
+        }
+
+        // Render all lists
+        renderChecklist('kitchen-list', checklists.kitchen);
+        renderChecklist('bathroom-list', checklists.bathroom);
+        renderChecklist('water-list', checklists.water);
+        renderChecklist('drain-list', checklists.drain);
+        renderChecklist('exterior-list', checklists.exterior);
+
+        // Print functionality
+        console.log('%cPlumbing Maintenance Checklist Ready ✅', 'color:#1e40af; font-weight:bold');
+    </script>
+</body>
+</html>
